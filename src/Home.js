@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import MainPage from './MainPage/MainPage'
 import {ThemeProvider,createMuiTheme} from '@material-ui/core'
 import 'fontsource-roboto';
@@ -11,6 +10,8 @@ import {
     DateTimePicker,
     MuiPickersUtilsProvider,
   } from '@material-ui/pickers';
+
+
 export default function App(){
     const theme=createMuiTheme({
         palette:{
@@ -24,10 +25,12 @@ export default function App(){
               }
         }
     });
+
+    
     return(
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
      <ThemeProvider theme={theme}>
-     <MainPage/>   
+        <MainPage />   
      </ThemeProvider>
      </MuiPickersUtilsProvider>
     )
